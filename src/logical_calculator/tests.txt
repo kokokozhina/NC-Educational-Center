@@ -1,0 +1,12 @@
+X | ~Y | ~X & Y //1
+~X & Y & (~Y) | Z //Z
+(X | Y) & (A & B) | ~B //~B|A&B&Y|A&B&X
+(X | Y) & (A & B) | ~B | ~A | ~Y //1
+A&B&A | B&A&A //A&B
+(A & B) | (B & C) | (B | ~ A) & (C & A) //A&B|B&C, but currently A&B&C|A&B|B&C
+1 & 0 //0
+0 | 0 //0
+A | B | ~C & B | ~A | ~B & ~A | A //1
+A | C & (B | ~C) & (A | ~B) | C & A //A , but currently A|A&B&C|A&C
+
+

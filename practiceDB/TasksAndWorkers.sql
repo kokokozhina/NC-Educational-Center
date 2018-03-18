@@ -1,17 +1,17 @@
-create table Worker
+CREATE TABLE Worker
 (WorkerID int PRIMARY KEY IDENTITY(1, 1), 
 Name varchar(30) NOT NULL, 
 Position varchar(30), 
 Phone varchar(30),
 Salary int);
 
-create table Task
+CREATE TABLE Task
 (TaskID int PRIMARY KEY IDENTITY(1, 1), 
 Specification varchar(30) NOT NULL, 
 Task_priority int, 
 Difficulty int);
 
-create table TasksAndWorkers
+CREATE TABLE TasksAndWorkers
 (TaskID int,
 WorkerID int, 
 PRIMARY KEY(TaskID, WorkerID));
@@ -33,7 +33,7 @@ INSERT INTO Worker VALUES
 INSERT INTO Worker VALUES
 ('Feofan', 'Junior Dev', '89263331895', 20000);
 
-select * from Worker
+SELECT * FROM Worker
 
 INSERT INTO Task VALUES
 ('Geom', 5, 3);
@@ -44,7 +44,7 @@ INSERT INTO Task VALUES
 INSERT INTO Task VALUES
 ('Machine Learning', 2, 8);
 
-select * from Task
+SELECT * FROM Task
 
 INSERT INTO TasksAndWorkers VALUES
 (1, 1);
@@ -61,4 +61,4 @@ INSERT INTO TasksAndWorkers VALUES
 INSERT INTO TasksAndWorkers VALUES
 (3, 2);
 
-select * from TasksAndWorkers 
+SELECT * FROM TasksAndWorkers 

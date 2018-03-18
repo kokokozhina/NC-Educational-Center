@@ -1,20 +1,23 @@
-CREATE TABLE Worker
-(WorkerID int PRIMARY KEY IDENTITY(1, 1), 
+CREATE TABLE Worker (
+WorkerID int PRIMARY KEY IDENTITY(1, 1), 
 Name varchar(30) NOT NULL, 
 Position varchar(30), 
 Phone varchar(30),
-Salary int);
+Salary int
+);
 
-CREATE TABLE Task
-(TaskID int PRIMARY KEY IDENTITY(1, 1), 
+CREATE TABLE Task (
+TaskID int PRIMARY KEY IDENTITY(1, 1), 
 Specification varchar(30) NOT NULL, 
 Task_priority int, 
-Difficulty int);
+Difficulty int
+);
 
-CREATE TABLE TasksAndWorkers
-(TaskID int,
+CREATE TABLE TasksAndWorkers (
+TaskID int,
 WorkerID int, 
-PRIMARY KEY(TaskID, WorkerID));
+PRIMARY KEY(TaskID, WorkerID)
+);
 
 ALTER TABLE TasksAndWorkers    
 ADD CONSTRAINT FK_Task FOREIGN KEY (TaskID)     
